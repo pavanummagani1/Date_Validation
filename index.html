@@ -10,10 +10,13 @@
 <body>
     <form action="./submit.html" method="get">
         <label for="Date">Date(YYYY-MM-DD)</label> <br>
-        <input type="text" id="Date" name="date" pattern="(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])"
+        <input type="text" id="Date" name="date"
+            pattern="(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]|29(?!-02)|28(?!-02))"
             title="enter date in given format" required /> <br>
         <input type="submit">
     </form>
 </body>
 
 </html>
+
+<!-- "(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])" without leap year -->
