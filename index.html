@@ -11,12 +11,16 @@
     <form action="./submit.html" method="get">
         <label for="Date">Date(YYYY-MM-DD)</label> <br>
         <input type="text" id="Date" name="date"
-            pattern="(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]|29(?!-02)|28(?!-02))"
-            title="enter date in given format" required /> <br>
-        <input type="submit">
+            pattern="^(?:(19|20)\d{2})-(0[1-9]|1[0-2])-(0[1-9]|1\d|2[0-8])$|^(?:(19|20)([02468][048]|[13579][26])|2000)-02-29$|^(?:(19|20)\d{2})-(0[13-9]|1[0-2])-(29|30)$|^(?:(19|20)\d{2})-(0[13578]|1[02])-31$"
+            title="Enter date in YYYY-MM-DD format" required /> <br>
+        <input type="submit" value="Submit">
     </form>
 </body>
 
 </html>
 
+
+
 <!-- "(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])" without leap year-->
+
+<!-- (19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]|29(?!-02)|28(?!-02)) -->
